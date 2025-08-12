@@ -1,0 +1,52 @@
+# Rust
+/target/
+/backend/target/
+/debug/
+**/*.rs.bk
+*.pdb
+
+# Node / Frontend
+/frontend/node_modules/
+/frontend/dist/
+/frontend/build/
+.cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tsbuildinfo
+
+# Environment files
+.env
+.env.*
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# OS junk
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Logs
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# Temp files
+*.tmp
+*.temp
+*.swp
+
+# Project-specific ignores
+structure.txt

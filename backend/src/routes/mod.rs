@@ -1,0 +1,12 @@
+pub mod auth_routes;
+pub mod ticket_routes;
+pub mod note_routes;
+pub mod message_routes;
+pub mod attachment_routes;
+pub mod kb_routes;
+pub mod notification_routes;
+pub mod report_routes;
+pub mod ws_routes;
+pub mod user_routes;
+pub mod comment_routes;
+pub mod agent_ticket_routes;

@@ -1,0 +1,56 @@
+[package]
+name = "major1"
+version = "0.1.0"
+edition = "2021"  # Changed from 2024 to 2021 (2024 edition doesn't exist yet)
+
+[dependencies]
+
+# --- Core Framework ---
+axum = { version = "0.8.4", features = ["ws"] }
+axum-extra = { version = "0.10", features = ["typed-header"] }
+axum-macros = "0.4"
+tokio = { version = "1.46", features = ["full"] }
+tokio-stream = "0.1"
+tokio-tungstenite = "0.21"
+
+# --- Middleware & Utilities ---
+tower = { version = "0.4", features = ["limit", "timeout", "load-shed"] }
+tower-http = { version = "0.6", features = ["cors", "trace", "limit", "timeout"] }
+# tower_governor = "0.7.0"  # ❌ REMOVED - too many type issues
+
+axum_csrf = "0.6"                          # ✅ CSRF protection
+headers = "0.4"
+quanta = "0.11"
+
+# --- Serialization / Validation ---
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+validator = { version = "0.16", features = ["derive"] }
+
+# --- Database / ORM ---
+sqlx = { version = "0.7", features = ["postgres", "runtime-tokio", "uuid", "chrono", "macros"] }
+uuid = { version = "1.8", features = ["v4", "serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+dotenvy = "0.15"
+
+# --- Authentication / Security ---
+jsonwebtoken = "9.2"
+bcrypt = "0.15"
+
+# --- Rate Limiting ---
+governor = "0.6"                          # Direct usage for simple rate limiting
+nonzero_ext = "0.3"
+
+# --- Error Handling / Utilities ---
+anyhow = "1.0"
+async-trait = "0.1"
+thiserror = "1.0"
+regex = "1.10"
+slug = "0.1"
+
+# --- Logging & Tracing ---
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+futures-util = "0.3.31"
+bytes = "1.5"
+urlencoding = "2.1"
