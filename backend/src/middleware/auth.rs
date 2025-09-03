@@ -16,15 +16,15 @@ pub struct AuthUser(pub PublicUser);
 
 impl<S> FromRequestParts<S> for AuthUser
 where
-    S: Send + Sync + std::ops::Deref<Target = AppState>,
+    S: Send + Sync + std::ops::Deref<Target = AppState>,  
 {
     type Rejection = StatusCode;
 
     async fn from_request_parts(
-        parts: &mut Parts,
+        parts: &mut Parts,    
         state: &S,
     ) -> Result<Self, Self::Rejection> {
-        let auth_header = parts
+        let auth_header = parts 
             .headers
             .get(axum::http::header::AUTHORIZATION)
             .ok_or(StatusCode::UNAUTHORIZED)?
